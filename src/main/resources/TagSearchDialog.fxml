@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="269.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photos.view.TagSearchController">
+    <expandableContent>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+    </expandableContent>
+   <content>
+      <VBox alignment="CENTER" prefHeight="202.0" prefWidth="480.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="13.0" prefWidth="459.0" spacing="130.0">
+               <children>
+                  <Label text="Key">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Value">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="43.0" prefWidth="459.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="firstTagKey" />
+                  <TextField fx:id="firstTagValue" />
+               </children>
+            </HBox>
+            <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="115.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="459.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="secondTagKey" />
+                  <TextField fx:id="secondTagValue" />
+               </children>
+            </HBox>
+            <Label text="*leave choicebox blank and fill in first tag for single tag search" textFill="#999999">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </content>
+   <buttonTypes>
+      <ButtonType fx:constant="CANCEL" />
+      <ButtonType fx:constant="OK" />
+   </buttonTypes>
+</DialogPane>
